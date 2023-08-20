@@ -1,0 +1,49 @@
+
+/* Author : @XyLA */
+/* Style Are still in progress ( masih dalam tahap pengembangan ) */
+/* NO PLAGIARISM ( Jangan Plagiat :D ) */
+/* Silahkan di otak atik sendiri ( asal ga main claim code file -_- ) */
+
+
+body{
+    background-color: #071e26;
+}
+h1{
+    text-align: center;
+    color:white;
+    font-family: system-ui;
+}
+div{
+    justify-content: center;
+    display: flex;
+}
+.first-name{
+    color: white;
+}
+.pholder-fname{
+    width: 140%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.last-name{
+    color: white;
+}
+.pholder-lname{
+    width: 140%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.option{
+    justify-content: center;
+    display: flex;
+}
