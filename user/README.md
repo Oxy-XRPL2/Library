@@ -1,4 +1,6 @@
 # List Contributor : #
 
-- Xyla (Owner)
-- Rouze (Co-Owner)
+- Oxy-XRPL2 (Owner)
+- Rouxez47 (Co-Owner)
+-
+-
