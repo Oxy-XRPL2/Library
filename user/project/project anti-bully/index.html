@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPelBul</title>
+    <link rel="icon" type="image/x-icon" href="../project anti-bully/images/smk10.png">
+
+    <style>
+        
+        body {
+            text-align: center;
+            background-color: rgb(31 102 153);
+            font-family: "Noto sans", sans-serif;
+            font-weight: 500;
+            
+        }
+
+        
+
+        /* --- Headers --- */
+        .hd-container {
+            margin: 0;
+            padding: 3px 22px;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: rgb(36, 100, 125);
+        }
+        .hd-container > h3 {
+            padding: 7px;
+            border-radius: 10px;
+            text-align: center;
+            color: rgb(255,255,255);
+            background-color: rgb(15, 14, 56);
+        }
+
+        /* --- Main Container --- */
+
+
+
+        /* --- Form Input --- */
+        .form-container {
+            justify-content: center;
+            margin: auto;
+            width: 60%;
+            border: 1px solid rgb(15, 14, 56);
+            border-radius: 16px;
+            padding: 10px;
+            background-image: linear-gradient(to top, rgb(255, 255, 255), transparent);
+        }
+        .form-input {
+            width: 97%;
+            padding: 12px 20px;
+            margin: 8px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        /* --- Form Output --- */
+        .result-container {
+            justify-content: center;
+            margin: auto;
+            width: 60%;
+            border: 1px solid rgb(15, 14, 56);
+            border-radius: 16px;
+            padding: 10px;
+            background-color: rgb(230 227 227);
+        }
+
+        button {
+            min-height: 35px;
+            min-width: 70px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button:hover {
+            border: 1px;
+            border-radius: 6px;
+            background-color: rgb(11, 138, 9);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+        <header>
+            <nav>
+                <div class="hd-container">
+                    <h3>PROGRAM PELAPORAN BULLYING X PPLG 2</h3>
+                </div>
+            </nav>
+        </header>
+
+        <br>
+    
+        <main class="container">
+            <div class="form-container">
+                <form id="report-form">
+
+                    <h3>Isi data tersebut sesuai kejadian</h3>
+
+                    <br>
+
+                    <label for="name">Korban :</label>
+                    <br>
+                    <input class="form-input" type="text" id="name" placeholder="Nama Korban..." autocomplete="off" required>
+
+                    <br>
+
+                    <label for="name2">Pelaku :</label>
+                    <br>
+                    <input class="form-input" type="text" id="name2" placeholder="Nama Pelaku..." autocomplete="off" required>
+
+                    <br>
+
+                    <label for="time">Waktu Kejadian :</label>
+                    <br>
+                    <input class="form-input" type="time" id="time" autocomplete="off" required>
+
+                    <br>
+
+                    <label for="place">Tempat Kejadian :</label>
+                    <br>
+                    <input class="form-input" type="text" id="place" placeholder="Tempat..." autocomplete="off" required>
+
+                    <br>
+
+                    <label for="kronologi">Kronologi Kejadian :</label>
+                    <br>
+                    <textarea class="form-input" id="kronologi" cols="30" rows="10" placeholder="Jelaskan Kronologi terjadinya pembullyian tersebut..." required></textarea>
+                    
+                    <button type="button" onclick="laporkanBullying()">Submit</button>
+                </form>
+            </div>
+
+            <br>
+            
+            <div class="result-container">
+                <div class="subresult-container" id="result">
+                    <h4>Hasil Laporan</h4>
+                    <div id="output-container"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <button onclick="keluar()">Keluar</button>
+
+            <br>
+        </main>
+
+    <br>
+    
+    <footer>
+        <div class="ft-container">
+           
+        </div>
+    </footer>
+
+    <script>
+        let laporanBullying = [];
+
+        function tampilkanLaporan() {
+            const outputContainer = document.getElementById('output-container');
+
+            if (laporanBullying.length === 0) {
+                outputContainer.innerHTML = '<p>Belum ada laporan bullying yang masuk.</p>';
+            } else {
+                outputContainer.innerHTML = '<h2>Daftar Laporan Bullying:</h2>';
+                laporanBullying.forEach(laporan => {
+                    outputContainer.innerHTML +=  `
+                        <div class="result-container">
+                            <p><strong>Nama Korban:</strong> ${laporan.namaKorban}</p>
+                            <p><strong>Nama Pelaku:</strong> ${laporan.namaPelaku}</p>
+                            <p><strong>Waktu:</strong> ${laporan.waktu}</p>
+                            <p><strong>Tempat:</strong> ${laporan.tempat}</p>
+                            <p><strong>Kronologi Kejadian:</strong> ${laporan.kronologiKejadian}</p>
+                        </div>
+                    `;
+                });
+            }
+        }
+
+        function laporkanBullying() {
+            const namaKorban = document.getElementById('name').value;
+            const namaPelaku = document.getElementById('name2').value;
+            const waktu = document.getElementById('time').value;
+            const tempat = document.getElementById('place').value;
+            const kronologiKejadian = document.getElementById('kronologi').value;
+
+            const laporan = {
+                namaKorban,
+                namaPelaku,
+                waktu,
+                tempat,
+                kronologiKejadian
+            };
+
+            laporanBullying.push(laporan);
+
+            tampilkanLaporan();
+
+            alert("Laporan Bullying Berhasil disampaikan. Terima atas partisipasi anda.\nTetap Semangat menjadi Agen Perubahan di kelas X PPLG 2");
+        }
+
+        function keluar() {
+            alert("Program Selesai.\n Program ini hanyalah rekayasa. Data yang anda telah submit akan hilang dan tidak terkirim.");
+            window.close();
+        }
+    </script>
+
+</body>
+</html>

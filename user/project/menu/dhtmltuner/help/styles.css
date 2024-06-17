@@ -1,0 +1,12 @@
+.mainTitle  {font-family: Arial; font-size: 22px; color: #709AFA; font-weight: bold;}
+.smallTitle {font-family: Arial; font-size: 14px; color: #FDBA82; font-weight: bold;}
+.title      {font-family: Tahoma, Verdana; font-size: 13px; color: #709AFA; font-weight: bold;}
+.text       {font-family: Tahoma, Verdana; font-size: 12px; color: #333333;}
+
+A.blue:link    {font-family: Tahoma, Verdana; font-size: 11px; color: #709AFA;; text-decoration: none;}
+A.blue:visited {font-family: Tahoma, Verdana; font-size: 11px; color: #709AFA;; text-decoration: none;}
+A.blue:hover   {font-family: Tahoma, Verdana; font-size: 11px; color: #A9C3FC; text-decoration: none;}
+
+A.lnk:link    {font-family: Tahoma, Verdana; font-size: 12px; color: #1A5DF7;; text-decoration: none;}
+A.lnk:visited {font-family: Tahoma, Verdana; font-size: 12px; color: #1A5DF7;; text-decoration: none;}
+A.lnk:hover   {font-family: Tahoma, Verdana; font-size: 12px; color: #A9C3FC; text-decoration: none;}
