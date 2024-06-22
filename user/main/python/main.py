@@ -5,3 +5,5 @@ if gyatt > rizz:
     print("not sigma")
 else:
     print("sigma")
+
+    what the fuk
