@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+body{
+    background: linear-gradient(to bottom right, #ffffff, #99ccff 135%);
+    background-repeat: no-repeat;
+}
+
+.center{
+    max-width: 325px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    background-color: #ffffff;
+}
+
+.banner{
+    max-width: 300px;
+    margin: 10px;
+    padding: 25px 50px 10px 55px; /* padding: Atas - Kanan - Bawah - Kiri  */
+}
+
+.container {
+    padding: 0 16px 30px;
+    text-align: center;
+}
+
+.container > p{
+    font-family: "Teachers", sans-serif;
+    font-style: normal;
+}
+
+.container > a{
+    padding: 5px;
+    color: rgb(47, 47, 47);
+    text-decoration: none;
+    font-family: "Teachers", sans-serif;
+    border: 1px solid rgb(47, 47, 47);
+    border-radius: 5px;
+}
+
+.container > a:hover{
+    transition: 0.3s ease-out;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(47, 47, 47);
+}
+
+.title {
+    color: rgb(47, 47, 47);
+}

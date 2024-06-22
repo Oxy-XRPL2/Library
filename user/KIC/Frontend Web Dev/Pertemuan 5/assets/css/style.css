@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+    margin-top: 0;
+    font-family: "Teachers", sans-serif;
+}
+
+.row {
+    position: relative;
+    left: 250px;
+    top: 270px; /*Cobalah ganti 150px :)*/
+    background-color: rgb(178, 255, 127);
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    padding: 10px;
+    font-family: "Teachers", sans-serif;
+}
+
+.row-2 {
+    margin: 250px /*Top*/ 10px /*Right*/ 10px /*Bottom*/ 250px /*Left*/;
+    background-color: rgb(255, 105, 105);
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    padding: 10px;
+    font-family: "Teachers", sans-serif;
+}
+
+.column {
+    background-color: white;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 10px 5px 10px;
+    min-width: 200px;
+}
+
